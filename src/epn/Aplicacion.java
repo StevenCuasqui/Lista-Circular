@@ -11,6 +11,17 @@ public class Aplicacion {
 		lista.insertarFinal("prueba 5");
 		lista.insertarInicio("prueba 6");
 		lista.imprimir();
+		System.out.println("");
+		try{
+			System.out.println(lista.buscarDato("prueba").getElemento());
+		}catch(NullPointerException er){
+			System.out.println("No se encontro ese elemento en la lista");
+		}
+		try{
+			System.out.println(lista.buscarInd(3).getElemento());
+		}catch(NullPointerException ex){
+			System.out.println("No se encuentra ningun elemento en esa posicion");
+		}
 	}
 
 }

@@ -69,6 +69,28 @@ public class ListaCircularDo {
 		
 	}
 	
+	public Nodo buscarDato(String dato){
+		
+		for(Nodo buscador=cabeza;buscador.getSiguiente()!=cabeza;buscador=buscador.getSiguiente()){
+			if(dato==buscador.getElemento()){
+				return buscador;
+			}
+		}
+		return null;
+	}
+	
+	public Nodo buscarInd(int ref){
+		
+		Nodo buscador= cabeza;
+		int ind=1;
+		for(buscador=cabeza;(buscador!=null)&&(ind<=ref);ind++){
+			if(ind==ref){
+				return buscador;
+			}
+			buscador=buscador.getSiguiente();
+		}return null;
+	}
+	
 	public void imprimir(){
 		if(vacia()){
 			System.out.println("Lista Vacia");
