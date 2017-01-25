@@ -64,7 +64,7 @@ public class ListaCircularDo {
 				actual.setSiguiente(p);
 				p.setAnterior(actual);
 			}
-				
+			
 		}
 		
 	}
@@ -102,6 +102,24 @@ public class ListaCircularDo {
 				actual=actual.getSiguiente();
 			}while(actual!=cabeza);
 		}
+	}
+	public void imprimirRev(){
+		if(vacia()){
+			System.out.println("Vacia \n");
+	}
+		Nodo actual=cabeza;
+		while(actual!=cabeza){
+			System.out.println(actual.getElemento());
+			actual=actual.getAnterior();
+		}
+}
+	public void imprimirAntSig(){
+		if(vacia()){
+			System.out.println("Vacia");
+		}
+		Nodo actual=cabeza;
+		
+		System.out.println(actual.getAnterior().getElemento()+"--"+actual.getElemento()+"--"+actual.getSiguiente().getElemento());
 	}
 	
 }

@@ -13,7 +13,7 @@ public class Aplicacion {
 		lista.imprimir();
 		System.out.println("");
 		try{
-			System.out.println(lista.buscarDato("prueba").getElemento());
+			System.out.println(lista.buscarDato("prueba 6").getElemento());
 		}catch(NullPointerException er){
 			System.out.println("No se encontro ese elemento en la lista");
 		}
@@ -22,6 +22,10 @@ public class Aplicacion {
 		}catch(NullPointerException ex){
 			System.out.println("No se encuentra ningun elemento en esa posicion");
 		}
+		
+		lista.imprimirAntSig();
+		lista.insertarInicio("steven");
+		lista.imprimirAntSig();
 	}
 
 }
